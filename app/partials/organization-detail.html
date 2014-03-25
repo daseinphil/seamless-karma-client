@@ -1,0 +1,39 @@
+<div class="container">
+  <h1>Organization Detail</h1>
+<div class="container-fluid">
+<div class="row">
+  <form novalidate="novalidate" class="form-horizontal">
+
+    <div class="control-group">
+      <label class="control-label" for="inputName">Organization Name:</label>
+      <div class="controls">
+        <input type="text" id="inputName" ng-model="organization.name"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputSeamlessId">Seamless ID:</label>
+      <div class="controls">
+        <input type="text" id="inputSeamlessId" ng-model="organization.seamless_id"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputDefaultAllocation">Default Allocation:</label>
+      <div class="controls">
+        <input type="text" id="inputDefaultAllocation" ng-model="organization.default_allocation"/>
+      </div>
+    </div>
+        
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="cancel()" class="btn btn-small">cancel</a>
+        <a ng-click="updateOrganization()" class="btn btn-small btn-primary">update organization</a>
+      </div>
+    </div>
+  </form> 
+</div>
+</div> 
+    
+</div>

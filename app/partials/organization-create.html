@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Create a New Organization</h1>
+  <form novalidate="novalidate" class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="inputName">Name:</label>
+      <div class="controls">
+        <input type="text" id="inputName" ng-model="organization.name" placeholder="Required"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputSeamlessId">Seamless ID:</label>
+      <div class="controls">
+        <input type="text" id="inputSeamlessId" ng-model="organization.seamless_id" placeholder="Optional"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputDefaultAllocation">Default Allocation:</label>
+      <div class="controls">
+        <input type="text" id="inputDefaultAllocation" ng-model="organization.default_allocation" placeholder="Optional"/>
+      </div>
+    </div>
+
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="cancel()" class="btn btn-small">cancel</a>
+        <a ng-click="createNewOrganization()" class="btn btn-small btn-primary">create new organization</a>
+      </div>
+    </div>
+  </form>
+</div>
+

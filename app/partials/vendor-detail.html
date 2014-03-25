@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Resturant Detail</h1>
+
+<div class="container-fluid">
+<div class="row">
+  <form novalidate="novalidate" class="form-horizontal">
+
+    <div class="control-group">
+      <label class="control-label" for="inputName">Resturaunt Name:</label>
+      <div class="controls">
+        <input type="text" id="inputName" ng-model="vendor.name"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputSeamlessId">Seamless ID:</label>
+      <div class="controls">
+        <input type="text" id="inputSeamlessId" ng-model="vendor.seamless_id"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputLatitude">Latitude:</label>
+      <div class="controls">
+        <input type="text" id="inputLatitude" ng-model="vendor.latitude"/>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label" for="inputLongitude">Longitude:</label>
+      <div class="controls">
+        <input type="text" id="inputLongitude" ng-model="vendor.longitude"/>
+      </div>
+    </div>
+
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="cancel()" class="btn btn-small">cancel</a>
+        <a ng-click="updateVendor()" class="btn btn-small btn-primary">update vendor</a>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+
+</div>
