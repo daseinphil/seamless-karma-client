@@ -1,47 +1,27 @@
-<!doctype html>
-<html lang="en" ng-app="myApp">
-<head>
+<!DOCTYPE html>
+<html>
+
+  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Seamless Karma</title>
-  <link rel="stylesheet" href="css/app.css"/>  
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-</head>
-<body>
+    <script data-require="angular.js@1.2.10" data-semver="1.2.10" src="http://code.angularjs.org/1.2.10/angular.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-<!-- Static navbar -->
-<div class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">SEAMLESS KARMA</a>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="#/organizations">Organizations</a></li>
-        <li><a href="#/users">Users</a></li>
-        <li><a href="#/vendors">Resturaunts</a></li>
-	<li class="pull-right">Login</li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container-fluid -->
-</div>
+ 
+  </head>
 
-<div class="row">
-  <div ng-view class="col-md-10 col-md-offset-1"></div>
-</div>
+  <body ng-app="myApp">
+      <header ng-include="'partials/navbar.html'"></header>
+      <div ui-view></div>
+  </body>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-route.js"></script>
   <script src="lib/angular/angular-resource.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
-
-</body>
+  
 </html>
-

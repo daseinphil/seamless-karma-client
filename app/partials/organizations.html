@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <div class="col-sm-3">
+      <ul class="nav nav-stacked well">
+	<li><a ng-click="createOrganization()" class="btn btn-small btn-success">create organization</a></li>
+        <br>
+        <li class="nav-header"><input type="text" placeholder="Filter Results" ng-model="query"></li>
+        <li ng-repeat="organization in organizations.data | filter:query">
+                <a href="#/organizations/detail/{{ organization.id }}" >{{ organization.name }}</a></li>
+      </ul>
+    </div>
+  <div class="col-sm-9" ui-view></div>
+</div>
+</div>
+

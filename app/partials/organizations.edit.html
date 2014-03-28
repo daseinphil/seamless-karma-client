@@ -1,7 +1,5 @@
-<div class="container">
-  <h1>Organization Detail</h1>
-<div class="container-fluid">
-<div class="row">
+  <h1>{{ organization.name }}</h1>
+
   <form novalidate="novalidate" class="form-horizontal">
 
     <div class="control-group">
@@ -19,21 +17,19 @@
     </div>
 
     <div class="control-group">
-      <label class="control-label" for="inputDefaultAllocation">Default Allocation:</label>
+      <label class="control-label" for="inputDefaultAllocation">Default Allocation:</label>       
       <div class="controls">
         <input type="text" id="inputDefaultAllocation" ng-model="organization.default_allocation"/>
       </div>
     </div>
-        
+
 <br>
     <div class="control-group">
       <div class="controls">
-        <a ng-click="cancel()" class="btn btn-small">cancel</a>
-        <a ng-click="updateOrganization()" class="btn btn-small btn-primary">update organization</a>
+        <a ng-click="cancel()" class="btn btn-small btn-warning">cancel</a>
+        <a ng-click="updateOrganization()" class="btn btn-small btn-success">update organization</a>
+	<a ng-click="deleteOrganization(organization.id)" class="btn btn-small btn-danger">delete</a>
       </div>
     </div>
-  </form> 
-</div>
-</div> 
-    
-</div>
+  </form>
+

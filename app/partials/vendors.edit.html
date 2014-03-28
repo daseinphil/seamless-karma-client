@@ -1,8 +1,5 @@
-<div class="container">
-  <h1>Resturant Detail</h1>
+  <h1>{{ vendor.name }}</h1>
 
-<div class="container-fluid">
-<div class="row">
   <form novalidate="novalidate" class="form-horizontal">
 
     <div class="control-group">
@@ -36,12 +33,10 @@
 <br>
     <div class="control-group">
       <div class="controls">
-        <a ng-click="cancel()" class="btn btn-small">cancel</a>
-        <a ng-click="updateVendor()" class="btn btn-small btn-primary">update vendor</a>
+        <a ng-click="cancel()" class="btn btn-small btn-warning">cancel</a>
+        <a ng-click="updateVendor()" class="btn btn-small btn-success">update vendor</a>
+	<a ng-click="deleteVendor(vendor.id)" class="btn btn-small btn-danger">delete</a>
       </div>
     </div>
   </form>
-</div>
-</div>
 
-</div>

@@ -1,0 +1,22 @@
+<h1>{{ organization.name }}</h1>
+
+<div class="row">
+<div class="col-sm-4">
+<ul>
+  <li>Seamless ID: {{ organization.seamless_id }}</li>
+  <li>Default Allocation: {{ organization.default_allocation }}</li>
+</ul>
+</div>
+<div class="col-sm-7 well">
+<p>When I grow up, I'll be a logo!</p>
+</div>
+</div>
+
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a href="#/organizations/edit/{{ organization.id }}" class="btn btn-small btn-primary" style="float: right;">update organization</a>
+      </div> 
+    </div>
+  </form>
+

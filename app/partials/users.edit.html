@@ -1,5 +1,4 @@
-<div class="container">
-  <h1>User detail</h1>
+  <h1>{{ user.username }}</h1>
 
   <form novalidate="novalidate" class="form-horizontal">
 
@@ -38,12 +37,17 @@
       </div>
     </div>
 
+
 <br>
     <div class="control-group">
       <div class="controls">
-        <a ng-click="cancel()" class="btn btn-small">cancel</a>
-        <a ng-click="updateUser()" class="btn btn-small btn-primary">update user</a>
+        <a ng-click="cancel()" class="btn btn-small btn-warning">cancel</a>
+        <a ng-click="updateUser()" class="btn btn-small btn-success">update user</a>
+	<a ng-click="deleteUser(user.id)" class="btn btn-small btn-danger">delete</a>
       </div>
     </div>
   </form>
-</div>
+
+
+
+

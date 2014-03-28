@@ -1,0 +1,23 @@
+<h1>{{ vendor.name }}</h1>
+
+<div class="row">
+<div class="col-sm-4">
+<ul>
+  <li>Seamless ID: {{ vendor.seamless_id }}</li>
+  <li>Latitude: {{ vendor.latitude }}</li>
+  <li>Longitude: {{ vendor.longitude }}</li>
+</ul>
+</div>
+<div class="col-sm-7 well">
+<p>When I grow up, I'll be a map!</p>
+</div>
+</div>
+
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a href="#/vendors/edit/{{ vendor.id }}" class="btn btn-small btn-primary" style="float: right;">update vendor</a>
+      </div>
+    </div>
+  </form>
+

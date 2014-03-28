@@ -1,0 +1,17 @@
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/home">SEAMLESS KARMA</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="organizations" ui-sref-active='active'>Organizations</a></li>
+        <li><a ui-sref="users" ui-sref-active='active'>Users</a></li>
+        <li><a ui-sref="vendors" ng-class="{active: $state.includes('vendors')}">Resturaunts</a></li>
+      </ul> 
+    <ul class="nav navbar-right">
+	        <li><a ui-sref="login" ui-sref-active='active'><span class="glyphicon glyphicon-user"></span></a></li>
+    </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container-fluid -->
+</div>

@@ -1,0 +1,25 @@
+<h1>{{ user.username }}</h1>
+
+<div class="row">
+<div class="col-sm-4">
+<ul>
+  <li>Name: {{ user.first_name + ' ' + user.last_name }}</li>
+  <li>Organization: {{ user.organization }}</li>
+  <li>Seamless ID: {{ user.seamless_id }}</li>
+  <li>Allocation: {{ user.allocation }}</li>
+</ul>
+</div>
+<div class="col-sm-4 well" style="float: right;">
+<center>
+<p>Current Karma:</p>
+<h1>{{ user.karma }}</h1>
+</center>
+</div>
+</div>
+
+<br>
+    <div class="control-group">
+      <div class="controls">
+        <a href="#/users/edit/{{ user.id }}" class="btn btn-small btn-primary" style="float: right;">update user</a>
+      </div>
+    </div>

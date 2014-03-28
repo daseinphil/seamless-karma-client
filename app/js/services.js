@@ -4,6 +4,21 @@
 
 var services = angular.module('myApp.services', ['ngResource']);
 
+services.factory('OrgsFactory', function ($resource) {
+    return $resource('http://www.seamlesskarma.com/api/organizations/', {}, {
+        query: { method: 'GET'},
+        create: { method: 'POST' }
+    })
+});
+
+services.factory('OrgFactory', function ($resource) {
+    return $resource('http://www.seamlesskarma.com/api/organizations/:id', {}, {
+        show: { method: 'GET' },
+        update: { method: 'PUT', params: {id: '@id'} },
+        delete: { method: 'DELETE', params: {id: '@id'} }
+    })       
+});
+
 services.factory('UsersFactory', function ($resource) {
     return $resource('http://www.seamlesskarma.com/api/users/', {}, {
         query: { method: 'GET'},
@@ -34,17 +49,10 @@ services.factory('VendorFactory', function ($resource) {
     })
 });
 
-services.factory('OrgsFactory', function ($resource) {
-    return $resource('http://www.seamlesskarma.com/api/organizations/', {}, {
-        query: { method: 'GET'},
-        create: { method: 'POST' }
-    })
-});
-
-services.factory('OrgFactory', function ($resource) {
-    return $resource('http://www.seamlesskarma.com/api/organizations/:id', {}, {
-        show: { method: 'GET' },
-        update: { method: 'PUT', params: {id: '@id'} },
-        delete: { method: 'DELETE', params: {id: '@id'} }
-    })       
-});
+services.factory('AuthService', [function() {
+	var skUser = {
+		isAuthenticated: true,
+		username: 'Phil'
+	};
+	return skUser;
+}]);
